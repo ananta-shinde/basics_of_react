@@ -1,19 +1,22 @@
 import logo from './logo.svg';
 import './App.css';
 import React, { useState } from 'react';
-import AppButton from './components/Appbutton';
-import Display from './components/Display';
-import Counter from './components/Couter';
-
+import Navbar from './components/Navbar';
+import AppCarousel from './components/AppCarousel';
+import ProductSection from './components/ProductSection';
+ 
 
 function App() {
-   
-  
-   
 
-  return (<>
-        <Counter/>
-      </>
+  return (
+         <>
+         <Navbar/>
+         <AppCarousel/>
+         <ProductSection/>
+         <ProductSection/>
+         <ProductSection/>
+         <ProductSection/>
+         </>
   );
 }
 
