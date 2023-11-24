@@ -1,22 +1,22 @@
 import logo from './logo.svg';
 import './App.css';
 import React, { useState } from 'react';
-import Navbar from './components/Navbar';
-import AppCarousel from './components/AppCarousel';
-import ProductSection from './components/ProductSection';
+import HomePage from './components/HomePage';
+import DetailsPage from './components/DetailsPage';
+import LoginPage from './components/LoginPage';
+import { BrowserRouter,Routes,Route } from 'react-router-dom';
  
 
 function App() {
-
+   const islogin = false;
   return (
-         <>
-         <Navbar/>
-         <AppCarousel/>
-         <ProductSection/>
-         <ProductSection/>
-         <ProductSection/>
-         <ProductSection/>
-         </>
+          <BrowserRouter>
+            <Routes>
+               <Route path="/" element={<HomePage/>}/>
+               <Route path="/login" element={<LoginPage/>}/>
+               <Route path="/details" element={<DetailsPage/>}/>
+            </Routes>
+          </BrowserRouter>
   );
 }
 
