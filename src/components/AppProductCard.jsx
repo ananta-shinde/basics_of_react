@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const AppProductCard = (props) => {
      
     return ( <div className='card product-card'  >
-               <Link to="/details">
+               <Link to={"/details/"+props.product.id}>
                 <img src={props.product.image} class="card-img-top" alt="..."/>
                 <div class="card-body">
                 <h5 class="card-title">{props.product.name}</h5>
