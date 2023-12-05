@@ -1,5 +1,7 @@
 import { useParams } from "react-router-dom";
 import AppButton from "./Appbutton";
+import AppRatings from "./AppRatings";
+import AppReviews from "./Reviews";
 
 const DetailsPage = (props) => {
     //const id = 1;
@@ -16,8 +18,19 @@ const DetailsPage = (props) => {
                 </div>
                 <div className="col">
                     <h2>{product.name}</h2>
+                    <AppRatings rating={product.rating}/>
                     <p>{product.price}</p>
                     <AppButton title="Add To Cart"/>
+                </div>
+            </div>
+            <div className="row p-4">
+                <div className="col">
+                    <AppReviews/>
+                    <AppReviews/>
+                    <AppReviews/>
+                    <AppReviews/>
+                    <AppReviews/>
+                    <AppReviews/>
                 </div>
             </div>
         </div>
